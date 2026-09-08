@@ -6,9 +6,16 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <h1 className="text-3xl font-semibold tracking-tight">Our story</h1>
-      <div className="mt-6 space-y-4 text-muted-foreground">
+    <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+      <div className="text-center">
+        <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase">
+          Since day one
+        </p>
+        <h1 className="mt-3 font-heading text-4xl tracking-wide uppercase">
+          Our story
+        </h1>
+      </div>
+      <div className="mt-10 space-y-4 text-muted-foreground">
         <p>
           Ember &amp; Oak opened with a simple idea: cook good ingredients over
           real fire, and let them speak for themselves. Our kitchen is built

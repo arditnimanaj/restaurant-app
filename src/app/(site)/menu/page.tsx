@@ -28,20 +28,29 @@ export default async function MenuPage() {
   }, {});
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <h1 className="text-3xl font-semibold tracking-tight">Menu</h1>
-      <p className="mt-2 text-muted-foreground">
-        Seasonal and subject to change based on availability.
-      </p>
+    <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+      <div className="text-center">
+        <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase">
+          Ember &amp; Oak
+        </p>
+        <h1 className="mt-3 font-heading text-4xl tracking-wide uppercase">
+          Menu
+        </h1>
+        <p className="mt-3 text-muted-foreground">
+          Seasonal and subject to change based on availability.
+        </p>
+      </div>
 
-      <div className="mt-10 space-y-12">
+      <div className="mt-14 space-y-12">
         {Object.entries(CATEGORY_LABELS).map(([category, label]) => {
           const categoryItems = grouped[category];
           if (!categoryItems?.length) return null;
           return (
             <section key={category}>
-              <h2 className="text-xl font-medium">{label}</h2>
-              <Separator className="mt-3 mb-6" />
+              <h2 className="font-heading text-xl tracking-wide uppercase">
+                {label}
+              </h2>
+              <Separator className="mt-3 mb-6 bg-border/60" />
               <div className="space-y-6">
                 {categoryItems.map((item) => (
                   <div key={item.id} className="flex justify-between gap-4">

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export type FeaturedItem = {
@@ -30,16 +29,21 @@ export function FeaturedMenu({ items }: { items: FeaturedItem[] }) {
   if (items.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-      <motion.h2
+    <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+      <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6 }}
-        className="mb-10 text-2xl font-semibold"
+        className="mb-14 text-center"
       >
-        From the menu
-      </motion.h2>
+        <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase">
+          Signature dishes
+        </p>
+        <h2 className="mt-3 font-heading text-3xl tracking-wide uppercase">
+          From the menu
+        </h2>
+      </motion.div>
       <motion.div
         variants={container}
         initial="hidden"
@@ -49,11 +53,11 @@ export function FeaturedMenu({ items }: { items: FeaturedItem[] }) {
       >
         {items.map((menuItem) => (
           <motion.div key={menuItem.id} variants={item} whileHover={{ y: -6 }}>
-            <Card className="h-full transition-shadow hover:shadow-lg">
+            <Card className="h-full border-border/60 bg-card/60 transition-colors hover:border-primary/40">
               <CardHeader>
-                <CardTitle className="flex items-baseline justify-between gap-2">
+                <CardTitle className="flex items-baseline justify-between gap-2 font-heading text-lg font-normal tracking-wide">
                   <span>{menuItem.name}</span>
-                  <span className="text-base font-normal text-muted-foreground">
+                  <span className="text-sm font-sans text-primary">
                     ${menuItem.price.toFixed(2)}
                   </span>
                 </CardTitle>
@@ -72,11 +76,14 @@ export function FeaturedMenu({ items }: { items: FeaturedItem[] }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="mt-8 text-center"
+        className="mt-10 text-center"
       >
-        <Button variant="link" nativeButton={false} render={<Link href="/menu" />}>
-          See the full menu &rarr;
-        </Button>
+        <Link
+          href="/menu"
+          className="border-b border-primary/50 pb-1 text-xs tracking-widest text-primary uppercase transition-colors hover:border-primary"
+        >
+          See the full menu
+        </Link>
       </motion.div>
     </section>
   );
