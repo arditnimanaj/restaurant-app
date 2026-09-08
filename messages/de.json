@@ -139,6 +139,14 @@
       "bar": "Die Bar",
       "privateEvents": "Private Veranstaltungen",
       "dessert": "Saisonales Dessert"
+    },
+    "notes": {
+      "diningRoom": "Abgenutztes Leder, gedimmtes Licht und Tische nah genug, um die Küche arbeiten zu hören.",
+      "hearth": "Eiche und Apfelholz, seit 16 Uhr gestapelt und brennend. Jeder Teller kommt einmal daran vorbei.",
+      "ribeye": "400 Gramm, außen kräftig angebraten, innen durchgehend rosa.",
+      "bar": "Hausgemachte Cocktails und ein Rotwein, der wechselt — je nachdem, was der Sommelier zuletzt geöffnet hat.",
+      "privateEvents": "Lange Tische, kein Vortrag über Mindestumsätze — sagen Sie uns einfach, wie viele und wann.",
+      "dessert": "Was gerade reif ist, wird flambiert, karamellisiert oder bekommt einen Boden."
     }
   },
   "admin": {

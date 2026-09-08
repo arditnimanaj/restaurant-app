@@ -139,6 +139,14 @@
       "bar": "The bar",
       "privateEvents": "Private events",
       "dessert": "Seasonal dessert"
+    },
+    "notes": {
+      "diningRoom": "Worn leather, low light, and tables close enough to hear the kitchen work.",
+      "hearth": "Oak and applewood, stacked and burning since 4pm. Every plate passes near it once.",
+      "ribeye": "14 ounces, charred hard on the outside, pink all the way through the middle.",
+      "bar": "House cocktails and a red blend that changes with whatever the sommelier opened last.",
+      "privateEvents": "Long tables, no minimum-spend lecture — just tell us how many and when.",
+      "dessert": "Whatever's ripe gets torched, curded, or given a crust."
     }
   },
   "admin": {

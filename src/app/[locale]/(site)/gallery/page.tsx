@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { GalleryFlipCard } from "@/components/gallery-flip-card";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("gallery");
@@ -51,27 +51,14 @@ export default async function GalleryPage() {
         </p>
       </div>
       <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {GALLERY_ITEMS.map((item) => {
-          const label = t(`items.${item.key}`);
-          return (
-            <div
-              key={item.key}
-              className="group relative flex aspect-square items-end overflow-hidden rounded-lg ring-1 ring-border/60"
-            >
-              <Image
-                src={item.src}
-                alt={label}
-                fill
-                sizes="(min-width: 640px) 33vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />
-              <span className="relative p-4 text-sm font-medium tracking-wide text-white uppercase drop-shadow">
-                {label}
-              </span>
-            </div>
-          );
-        })}
+        {GALLERY_ITEMS.map((item) => (
+          <GalleryFlipCard
+            key={item.key}
+            imageSrc={item.src}
+            label={t(`items.${item.key}`)}
+            note={t(`notes.${item.key}`)}
+          />
+        ))}
       </div>
     </div>
   );
