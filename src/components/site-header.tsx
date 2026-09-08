@@ -26,7 +26,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Button size="sm" render={<Link href="/reservations" />}>
+        <Button size="sm" nativeButton={false} render={<Link href="/reservations" />}>
           Reserve a table
         </Button>
       </div>

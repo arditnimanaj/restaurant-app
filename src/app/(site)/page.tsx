@@ -24,10 +24,19 @@ export default async function HomePage() {
             cooking and the best produce we can find each week.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" render={<Link href="/reservations" />}>
+            <Button
+              size="lg"
+              nativeButton={false}
+              render={<Link href="/reservations" />}
+            >
               Reserve a table
             </Button>
-            <Button size="lg" variant="outline" render={<Link href="/menu" />}>
+            <Button
+              size="lg"
+              variant="outline"
+              nativeButton={false}
+              render={<Link href="/menu" />}
+            >
               View the menu
             </Button>
           </div>
@@ -57,7 +66,11 @@ export default async function HomePage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Button variant="link" render={<Link href="/menu" />}>
+            <Button
+              variant="link"
+              nativeButton={false}
+              render={<Link href="/menu" />}
+            >
               See the full menu &rarr;
             </Button>
           </div>

@@ -177,15 +177,10 @@ function DeleteMenuItemButton({ id, name }: { id: string; name: string }) {
 
 function AvailabilityToggle({ item }: { item: SerializedMenuItem }) {
   return (
-    <form
-      action={toggleMenuItemAvailability}
-      onChange={(event) => event.currentTarget.requestSubmit()}
-      className="flex items-center gap-2"
-    >
-      <input type="hidden" name="id" value={item.id} />
-      <input type="hidden" name="available" value={(!item.available).toString()} />
-      <Switch defaultChecked={item.available} />
-    </form>
+    <Switch
+      checked={item.available}
+      onCheckedChange={(checked) => toggleMenuItemAvailability(item.id, checked)}
+    />
   );
 }
 

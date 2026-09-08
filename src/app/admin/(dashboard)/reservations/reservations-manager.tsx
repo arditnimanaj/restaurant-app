@@ -41,22 +41,24 @@ const STATUS_VARIANT: Record<
 
 function StatusSelect({ reservation }: { reservation: SerializedReservation }) {
   return (
-    <form
-      action={updateReservationStatus}
-      onChange={(event) => event.currentTarget.requestSubmit()}
+    <Select
+      value={reservation.status}
+      onValueChange={(value) =>
+        updateReservationStatus(
+          reservation.id,
+          value as SerializedReservation["status"],
+        )
+      }
     >
-      <input type="hidden" name="id" value={reservation.id} />
-      <Select name="status" defaultValue={reservation.status}>
-        <SelectTrigger size="sm" className="w-[130px]">
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="PENDING">Pending</SelectItem>
-          <SelectItem value="CONFIRMED">Confirmed</SelectItem>
-          <SelectItem value="CANCELLED">Cancelled</SelectItem>
-        </SelectContent>
-      </Select>
-    </form>
+      <SelectTrigger size="sm" className="w-[130px]">
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="PENDING">Pending</SelectItem>
+        <SelectItem value="CONFIRMED">Confirmed</SelectItem>
+        <SelectItem value="CANCELLED">Cancelled</SelectItem>
+      </SelectContent>
+    </Select>
   );
 }
 

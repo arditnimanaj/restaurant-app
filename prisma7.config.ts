@@ -10,6 +10,8 @@ export default defineConfig({
     seed: "tsx prisma/seed.ts",
   },
   datasource: {
-    url: process.env["DATABASE_URL"],
+    // Migrations run against the direct (unpooled) connection when available
+    // (recommended for Neon + PgBouncer); falls back to DATABASE_URL locally.
+    url: process.env["DIRECT_URL"] ?? process.env["DATABASE_URL"],
   },
 });

@@ -59,9 +59,7 @@ export async function deleteMenuItem(formData: FormData) {
   revalidatePath("/menu");
 }
 
-export async function toggleMenuItemAvailability(formData: FormData) {
-  const id = String(formData.get("id") ?? "");
-  const available = String(formData.get("available")) === "true";
+export async function toggleMenuItemAvailability(id: string, available: boolean) {
   if (!id) throw new Error("Missing id");
 
   await prisma.menuItem.update({ where: { id }, data: { available } });
