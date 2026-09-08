@@ -15,6 +15,7 @@ export default async function AdminMenuPage() {
     price: Number(item.price),
     category: item.category,
     available: item.available,
+    imageUrl: item.imageUrl,
   }));
 
   return <MenuManager items={serialized} />;

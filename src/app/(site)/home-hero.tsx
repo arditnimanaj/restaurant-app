@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,7 +31,15 @@ const item = {
 export function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-background to-background" />
+      <Image
+        src="https://images.unsplash.com/photo-1761138785048-9dae4abb0a0c?w=1600&q=70"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover opacity-40"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-background/85 to-background" />
       <div className="absolute inset-0">
         <EmberScene />
       </div>

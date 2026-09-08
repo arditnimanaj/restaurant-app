@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
+import Image from "next/image";
 import {
   Select,
   SelectContent,
@@ -42,6 +43,7 @@ export type SerializedMenuItem = {
   price: number;
   category: "STARTER" | "MAIN" | "DESSERT" | "DRINK";
   available: boolean;
+  imageUrl: string | null;
 };
 
 const CATEGORY_LABELS: Record<SerializedMenuItem["category"], string> = {
@@ -96,6 +98,16 @@ function MenuItemFields({ item }: { item?: SerializedMenuItem }) {
             </SelectContent>
           </Select>
         </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="imageUrl">Image URL</Label>
+        <Input
+          id="imageUrl"
+          name="imageUrl"
+          type="url"
+          placeholder="https://..."
+          defaultValue={item?.imageUrl ?? ""}
+        />
       </div>
     </div>
   );
@@ -212,6 +224,7 @@ export function MenuManager({ items }: { items: SerializedMenuItem[] }) {
               <Table>
                 <TableHeader>
                   <TableRow>
+                    <TableHead></TableHead>
                     <TableHead>Name</TableHead>
                     <TableHead>Price</TableHead>
                     <TableHead>Available</TableHead>
@@ -221,6 +234,19 @@ export function MenuManager({ items }: { items: SerializedMenuItem[] }) {
                 <TableBody>
                   {categoryItems.map((item) => (
                     <TableRow key={item.id}>
+                      <TableCell>
+                        {item.imageUrl ? (
+                          <Image
+                            src={item.imageUrl}
+                            alt={item.name}
+                            width={48}
+                            height={48}
+                            className="size-12 rounded-md object-cover"
+                          />
+                        ) : (
+                          <div className="size-12 rounded-md bg-muted" />
+                        )}
+                      </TableCell>
                       <TableCell>
                         <div className="font-medium">{item.name}</div>
                         <div className="text-sm text-muted-foreground">

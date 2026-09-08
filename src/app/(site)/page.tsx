@@ -16,6 +16,7 @@ export default async function HomePage() {
     name: item.name,
     description: item.description,
     price: Number(item.price),
+    imageUrl: item.imageUrl,
   }));
 
   return (

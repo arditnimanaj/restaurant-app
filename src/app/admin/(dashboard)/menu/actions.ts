@@ -16,17 +16,19 @@ export async function createMenuItem(formData: FormData) {
   const description = String(formData.get("description") ?? "").trim();
   const price = Number(formData.get("price"));
   const category = parseCategory(formData.get("category"));
+  const imageUrl = String(formData.get("imageUrl") ?? "").trim();
 
   if (!name || !description || Number.isNaN(price) || price < 0) {
     throw new Error("Invalid menu item data");
   }
 
   await prisma.menuItem.create({
-    data: { name, description, price, category },
+    data: { name, description, price, category, imageUrl: imageUrl || null },
   });
 
   revalidatePath("/admin/menu");
   revalidatePath("/menu");
+  revalidatePath("/");
 }
 
 export async function updateMenuItem(formData: FormData) {
@@ -35,6 +37,7 @@ export async function updateMenuItem(formData: FormData) {
   const description = String(formData.get("description") ?? "").trim();
   const price = Number(formData.get("price"));
   const category = parseCategory(formData.get("category"));
+  const imageUrl = String(formData.get("imageUrl") ?? "").trim();
 
   if (!id || !name || !description || Number.isNaN(price) || price < 0) {
     throw new Error("Invalid menu item data");
@@ -42,11 +45,12 @@ export async function updateMenuItem(formData: FormData) {
 
   await prisma.menuItem.update({
     where: { id },
-    data: { name, description, price, category },
+    data: { name, description, price, category, imageUrl: imageUrl || null },
   });
 
   revalidatePath("/admin/menu");
   revalidatePath("/menu");
+  revalidatePath("/");
 }
 
 export async function deleteMenuItem(formData: FormData) {
@@ -57,6 +61,7 @@ export async function deleteMenuItem(formData: FormData) {
 
   revalidatePath("/admin/menu");
   revalidatePath("/menu");
+  revalidatePath("/");
 }
 
 export async function toggleMenuItemAvailability(id: string, available: boolean) {
@@ -65,5 +70,6 @@ export async function toggleMenuItemAvailability(id: string, available: boolean)
   await prisma.menuItem.update({ where: { id }, data: { available } });
 
   revalidatePath("/admin/menu");
+  revalidatePath("/");
   revalidatePath("/menu");
 }

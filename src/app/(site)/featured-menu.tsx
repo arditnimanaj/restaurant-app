@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 export type FeaturedItem = {
   id: string;
   name: string;
   description: string;
   price: number;
+  imageUrl: string | null;
 };
 
 const container = {
@@ -53,17 +55,26 @@ export function FeaturedMenu({ items }: { items: FeaturedItem[] }) {
       >
         {items.map((menuItem) => (
           <motion.div key={menuItem.id} variants={item} whileHover={{ y: -6 }}>
-            <Card className="h-full border-border/60 bg-card/60 transition-colors hover:border-primary/40">
-              <CardHeader>
-                <CardTitle className="flex items-baseline justify-between gap-2 font-heading text-lg font-normal tracking-wide">
+            <Card className="h-full overflow-hidden border-border/60 bg-card/60 py-0 transition-colors hover:border-primary/40">
+              {menuItem.imageUrl ? (
+                <div className="relative aspect-4/3 w-full overflow-hidden">
+                  <Image
+                    src={menuItem.imageUrl}
+                    alt={menuItem.name}
+                    fill
+                    sizes="(min-width: 640px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              ) : null}
+              <CardContent className="pt-5 pb-6">
+                <div className="flex items-baseline justify-between gap-2 font-heading text-lg font-normal tracking-wide">
                   <span>{menuItem.name}</span>
                   <span className="text-sm font-sans text-primary">
                     ${menuItem.price.toFixed(2)}
                   </span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">
                   {menuItem.description}
                 </p>
               </CardContent>

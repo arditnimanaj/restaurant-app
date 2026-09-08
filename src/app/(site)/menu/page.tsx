@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { prisma } from "@/lib/db";
 import { Separator } from "@/components/ui/separator";
 
@@ -53,16 +54,27 @@ export default async function MenuPage() {
               <Separator className="mt-3 mb-6 bg-border/60" />
               <div className="space-y-6">
                 {categoryItems.map((item) => (
-                  <div key={item.id} className="flex justify-between gap-4">
-                    <div>
-                      <p className="font-medium">{item.name}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {item.description}
+                  <div key={item.id} className="flex items-center gap-4">
+                    {item.imageUrl ? (
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.name}
+                        width={64}
+                        height={64}
+                        className="size-16 shrink-0 rounded-md object-cover ring-1 ring-border/60"
+                      />
+                    ) : null}
+                    <div className="flex flex-1 justify-between gap-4">
+                      <div>
+                        <p className="font-medium">{item.name}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
+                      </div>
+                      <p className="shrink-0 font-medium">
+                        ${Number(item.price).toFixed(2)}
                       </p>
                     </div>
-                    <p className="shrink-0 font-medium">
-                      ${Number(item.price).toFixed(2)}
-                    </p>
                   </div>
                 ))}
               </div>
