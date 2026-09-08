@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <line x1="16" y1="16" x2="48" y2="16" stroke="#c9a26b" stroke-width="1.5" />
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'Playfair Display', 'Times New Roman', serif" font-size="24" font-weight="600">
+    <tspan fill="#1a1a1a">E</tspan><tspan fill="#c9a26b">&amp;</tspan><tspan fill="#1a1a1a">O</tspan>
+  </text>
+  <line x1="16" y1="48" x2="48" y2="48" stroke="#c9a26b" stroke-width="1.5" />
+</svg>

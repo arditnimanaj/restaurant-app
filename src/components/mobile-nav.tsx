@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { Logo } from "@/components/logo";
 
 export function MobileNav() {
   const t = useTranslations("nav");
@@ -36,8 +37,8 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" className="flex w-4/5 flex-col">
         <SheetHeader>
-          <SheetTitle className="font-heading text-xl tracking-wide">
-            Ember <span className="text-primary">&amp;</span> Oak
+          <SheetTitle>
+            <Logo textClassName="text-xl" />
           </SheetTitle>
         </SheetHeader>
 

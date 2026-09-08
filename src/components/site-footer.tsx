@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { Logo } from "@/components/logo";
 
 export async function SiteFooter() {
   const t = await getTranslations("footer");
@@ -14,9 +15,7 @@ export async function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-black/30">
       <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
-        <p className="font-heading text-2xl tracking-wide">
-          Ember <span className="text-primary">&amp;</span> Oak
-        </p>
+        <Logo className="justify-center" />
         <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
           {t("tagline")}
         </p>

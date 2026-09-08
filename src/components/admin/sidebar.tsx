@@ -21,6 +21,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { Logo } from "@/components/logo";
 import { cn } from "cn";
 
 function isActive(pathname: string, href: string) {
@@ -89,10 +90,8 @@ export function AdminSidebar() {
   return (
     <aside className="hidden h-screen w-64 shrink-0 flex-col border-r border-border/60 bg-card/40 md:flex">
       <div className="border-b border-border/60 px-6 py-6">
-        <p className="font-heading text-xl tracking-wide">
-          Ember <span className="text-primary">&amp;</span> Oak
-        </p>
-        <div className="mt-0.5 flex items-center justify-between">
+        <Logo textClassName="text-xl" />
+        <div className="mt-2 flex items-center justify-between">
           <p className="text-xs tracking-widest text-muted-foreground uppercase">
             {t("adminLabel")}
           </p>
@@ -126,9 +125,7 @@ export function AdminMobileNav() {
 
   return (
     <header className="flex items-center justify-between border-b border-border/60 bg-card/40 px-4 py-4 md:hidden">
-      <p className="font-heading text-lg tracking-wide">
-        Ember <span className="text-primary">&amp;</span> Oak
-      </p>
+      <Logo textClassName="text-lg" />
       <Sheet>
         <SheetTrigger render={<Button variant="ghost" size="icon" />}>
           <Menu className="size-5" />
@@ -136,8 +133,8 @@ export function AdminMobileNav() {
         </SheetTrigger>
         <SheetContent side="right" className="flex w-4/5 flex-col">
           <SheetHeader>
-            <SheetTitle className="font-heading text-xl tracking-wide">
-              Ember <span className="text-primary">&amp;</span> Oak
+            <SheetTitle>
+              <Logo textClassName="text-xl" />
             </SheetTitle>
           </SheetHeader>
           <nav className="flex-1 space-y-1 px-2">

@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/mobile-nav";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { Logo } from "@/components/logo";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -40,11 +41,8 @@ export async function SiteHeader() {
 
       <div className="border-b border-border/60">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5 sm:px-6">
-          <Link
-            href="/"
-            className="font-heading text-2xl tracking-wide text-foreground"
-          >
-            Ember <span className="text-primary">&amp;</span> Oak
+          <Link href="/" className="text-foreground">
+            <Logo />
           </Link>
           <nav className="hidden items-center gap-x-7 md:flex">
             {NAV_LINKS.map((link) => (
