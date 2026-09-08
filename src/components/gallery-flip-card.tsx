@@ -34,15 +34,29 @@ function useCanFlip() {
 }
 
 function CardFront({ imageSrc, label }: { imageSrc: string; label: string }) {
+  const reduceMotion = useReducedMotion();
+
   return (
     <>
-      <Image
-        src={imageSrc}
-        alt={label}
-        fill
-        sizes="(min-width: 640px) 33vw, 100vw"
-        className="object-cover"
-      />
+      <motion.div
+        className="absolute inset-0"
+        initial={{ scale: 1 }}
+        whileInView={{ scale: 1.08 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={
+          reduceMotion
+            ? { duration: 0 }
+            : { duration: 1.1, ease: [0.16, 1, 0.3, 1] }
+        }
+      >
+        <Image
+          src={imageSrc}
+          alt={label}
+          fill
+          sizes="(min-width: 640px) 33vw, 100vw"
+          className="object-cover"
+        />
+      </motion.div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />
       <span className="relative p-4 text-sm font-medium tracking-wide text-white uppercase drop-shadow">
         {label}
