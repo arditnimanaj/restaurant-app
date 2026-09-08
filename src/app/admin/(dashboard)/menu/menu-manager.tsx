@@ -194,7 +194,7 @@ export function MenuManager({ items }: { items: SerializedMenuItem[] }) {
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Menu</h1>
+        <h1 className="font-heading text-2xl tracking-wide">Menu</h1>
         <AddMenuItemDialog />
       </div>
 

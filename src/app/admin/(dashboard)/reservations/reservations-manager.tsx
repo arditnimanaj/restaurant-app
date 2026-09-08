@@ -69,7 +69,7 @@ export function ReservationsManager({
 }) {
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-semibold">Reservations</h1>
+      <h1 className="mb-6 font-heading text-2xl tracking-wide">Reservations</h1>
       {reservations.length === 0 ? (
         <p className="text-sm text-muted-foreground">No reservations yet.</p>
       ) : (

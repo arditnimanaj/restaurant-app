@@ -21,7 +21,7 @@ export function MessagesManager({
 }) {
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-semibold">Messages</h1>
+      <h1 className="mb-6 font-heading text-2xl tracking-wide">Messages</h1>
       {messages.length === 0 ? (
         <p className="text-sm text-muted-foreground">No messages yet.</p>
       ) : (
