@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "title": "Ember & Oak",
+    "description": "Ember & Oak ist ein Restaurant mit Holzofenküche, das saisonale, zutatenbetonte Gerichte serviert."
+  },
+  "nav": {
+    "menu": "Speisekarte",
+    "about": "Über uns",
+    "gallery": "Galerie",
+    "reservations": "Reservierungen",
+    "contact": "Kontakt",
+    "findTable": "Tisch finden",
+    "reserveTable": "Tisch reservieren",
+    "openMenu": "Menü öffnen"
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "de": "DE"
+  },
+  "footer": {
+    "tagline": "Saisonale Holzofenküche im Herzen der Stadt.",
+    "addressLabel": "Adresse",
+    "addressLine1": "123 Market Street",
+    "addressLine2": "Springfield, USA",
+    "hoursLabel": "Öffnungszeiten",
+    "hoursLine1": "Di–So: 17:00 – 22:00 Uhr",
+    "hoursLine2": "Montags geschlossen",
+    "callLabel": "Anrufen",
+    "emailLabel": "E-Mail",
+    "bookTable": "Tisch buchen",
+    "copyright": "© {year} Ember & Oak. Alle Rechte vorbehalten."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Holzofenküche,",
+      "titleLine2": "saisonale Zutaten",
+      "subtitle": "Erlesenste Zutaten. Kochen über offenem Feuer. Außergewöhnlicher Service.",
+      "reserve": "Tisch reservieren",
+      "discoverMenu": "Speisekarte entdecken"
+    },
+    "featuredMenu": {
+      "eyebrow": "Signature-Gerichte",
+      "heading": "Aus der Speisekarte",
+      "seeFullMenu": "Zur vollständigen Speisekarte"
+    }
+  },
+  "about": {
+    "eyebrow": "Seit dem ersten Tag",
+    "title": "Unsere Geschichte",
+    "intro": "Ember & Oak entstand aus einer einfachen Idee: gute Zutaten über echtem Feuer zubereiten und für sich selbst sprechen lassen.",
+    "values": {
+      "woodFired": { "label": "Holzofen", "description": "Jedes Gericht kommt irgendwann in die Nähe der Feuerstelle." },
+      "seasonal": { "label": "Saisonal", "description": "Die Speisekarte ändert sich mit dem, was lokale Höfe liefern." },
+      "familyRun": { "label": "Familienbetrieb", "description": "Seit dem ersten Tag von derselben Familie geführt." },
+      "established": { "label": "Gegr. 2015", "description": "Seit einem Jahrzehnt in der Nachbarschaft, und es geht weiter." }
+    },
+    "story": {
+      "fire": {
+        "eyebrow": "Das Feuer",
+        "title": "Kochen über echter Flamme",
+        "body": "Unsere Küche ist um eine holzbefeuerte Feuerstelle herum aufgebaut, nicht um eine Reihe von Gasbrennern. Es ist langsamer, weniger verzeihend – und genau das ist der Punkt: echtes Feuer verleiht dem Essen eine Tiefe, die sich nicht nachmachen lässt. Fast alles, was die Küche verlässt, vom Brot bis zum Dessert, kommt irgendwann in die Nähe der Flamme."
+      },
+      "ingredients": {
+        "eyebrow": "Die Zutaten",
+        "title": "Saisonal, aus der Nähe bezogen",
+        "body": "Wir arbeiten mit lokalen Höfen, Fischhändlern und Metzgern zusammen, um eine Speisekarte zu gestalten, die sich wirklich mit den Jahreszeiten ändert – keine laminierte Karte, die sich nie bewegt. Wenn ein Gemüse diese Woche nicht gut ist, kommt es diese Woche nicht auf den Teller. Das ist die Abmachung, die wir mit unseren Lieferanten und unseren Gästen getroffen haben."
+      },
+      "table": {
+        "eyebrow": "Der Tisch",
+        "title": "Gastfreundschaft an erster Stelle",
+        "body": "Es ist ein kleiner Speisesaal mit großem Fokus auf Gastfreundschaft. Wir möchten, dass sich jeder Tisch wie der Stammtisch fühlt, egal ob es Ihr erster oder Ihr fünfzigster Besuch ist. Servicekräfte, die die Speisekarte auswendig kennen, ein Raum, der sich nicht zu sehr bemüht, und Essen, das heiß bei Ihnen ankommt."
+      }
+    },
+    "quote": "„Ob Sie an einem ruhigen Wochenabend oder zu einem besonderen Anlass zu uns kommen – wir freuen uns, dass Sie hier sind.“",
+    "reserve": "Tisch reservieren"
+  },
+  "contact": {
+    "eyebrow": "Kontaktieren Sie uns",
+    "title": "Kontakt",
+    "subtitle": "Fragen, private Veranstaltungen oder Feedback — schreiben Sie uns eine Nachricht, wir antworten innerhalb ein bis zwei Tagen.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "successToast": "Nachricht gesendet! Wir melden uns bald bei Ihnen."
+    },
+    "errors": {
+      "missingFields": "Bitte füllen Sie alle Felder aus.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+    }
+  },
+  "reservations": {
+    "eyebrow": "Besuchen Sie uns",
+    "title": "Tisch reservieren",
+    "subtitle": "Senden Sie unten eine Anfrage, wir bestätigen per E-Mail oder Telefon. Für Gruppen über 8 Personen kontaktieren Sie uns bitte direkt.",
+    "form": {
+      "name": "Name",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "partySize": "Personenzahl",
+      "notes": "Anmerkungen (optional)",
+      "notesPlaceholder": "Allergien, besondere Anlässe, Sitzwünsche...",
+      "submit": "Reservierung anfragen",
+      "submitting": "Wird gesendet...",
+      "successToast": "Reservierungsanfrage gesendet! Wir bestätigen per E-Mail."
+    },
+    "errors": {
+      "missingFields": "Bitte füllen Sie alle Pflichtfelder aus.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "invalidPartySize": "Die Personenzahl muss zwischen 1 und 20 liegen.",
+      "invalidDateTime": "Bitte wählen Sie ein gültiges Datum und eine gültige Uhrzeit.",
+      "pastDateTime": "Bitte wählen Sie ein Datum und eine Uhrzeit in der Zukunft."
+    }
+  },
+  "menu": {
+    "eyebrow": "Ember & Oak",
+    "title": "Speisekarte",
+    "subtitle": "Saisonal und je nach Verfügbarkeit ändert sich die Karte.",
+    "categories": {
+      "STARTER": "Vorspeisen",
+      "MAIN": "Hauptgerichte",
+      "DESSERT": "Desserts",
+      "DRINK": "Getränke"
+    },
+    "empty": "Die Speisekarte wird gerade aktualisiert. Bitte schauen Sie bald wieder vorbei."
+  },
+  "gallery": {
+    "eyebrow": "Ein Blick in Ember & Oak",
+    "title": "Galerie",
+    "subtitle": "Ein Blick in das Restaurant — der Speisesaal, das Feuer, und was davon kommt.",
+    "items": {
+      "diningRoom": "Der Speisesaal",
+      "hearth": "Der Holzofen",
+      "ribeye": "Ribeye vom Holzfeuer",
+      "bar": "Die Bar",
+      "privateEvents": "Private Veranstaltungen",
+      "dessert": "Saisonales Dessert"
+    }
+  },
+  "admin": {
+    "brand": "Ember & Oak",
+    "adminLabel": "Admin",
+    "nav": {
+      "dashboard": "Übersicht",
+      "menu": "Speisekarte",
+      "reservations": "Reservierungen",
+      "messages": "Nachrichten",
+      "logout": "Abmelden"
+    },
+    "login": {
+      "title": "Admin-Anmeldung",
+      "description": "Geben Sie das Admin-Passwort ein, um Speisekarte und Reservierungen zu verwalten.",
+      "password": "Passwort",
+      "submit": "Anmelden",
+      "submitting": "Wird angemeldet...",
+      "error": "Falsches Passwort."
+    },
+    "dashboard": {
+      "title": "Übersicht",
+      "stats": {
+        "menuItems": "Menüpunkte",
+        "menuItemsSubtitle": "{count} verfügbar",
+        "reservations": "Reservierungen",
+        "reservationsSubtitle": "{count} ausstehend",
+        "thisWeek": "Diese Woche",
+        "thisWeekSubtitle": "anstehende Reservierungen",
+        "messages": "Nachrichten",
+        "messagesSubtitle": "{count} ungelesen"
+      },
+      "reservationStatus": "Reservierungsstatus",
+      "upcomingReservations": "Anstehende Reservierungen",
+      "noUpcomingReservations": "Keine anstehenden Reservierungen.",
+      "partyOf": "Gruppe von {count}",
+      "viewAll": "Alle anzeigen",
+      "menuByCategory": "Speisekarte nach Kategorie",
+      "recentMessages": "Neueste Nachrichten",
+      "noMessagesYet": "Noch keine Nachrichten."
+    },
+    "menuManager": {
+      "title": "Speisekarte",
+      "addItem": "Gericht hinzufügen",
+      "addItemTitle": "Menüpunkt hinzufügen",
+      "editItemTitle": "Menüpunkt bearbeiten",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "deleteConfirm": "\"{name}\" löschen? Dies kann nicht rückgängig gemacht werden.",
+      "saveItem": "Gericht speichern",
+      "saveChanges": "Änderungen speichern",
+      "empty": "Noch keine Menüpunkte. Fügen Sie oben Ihren ersten hinzu.",
+      "fields": {
+        "name": "Name",
+        "description": "Beschreibung",
+        "price": "Preis ($)",
+        "category": "Kategorie",
+        "imageUrl": "Bild-URL"
+      },
+      "categories": {
+        "STARTER": "Vorspeise",
+        "MAIN": "Hauptgericht",
+        "DESSERT": "Dessert",
+        "DRINK": "Getränk"
+      },
+      "table": {
+        "name": "Name",
+        "price": "Preis",
+        "available": "Verfügbar",
+        "actions": "Aktionen"
+      }
+    },
+    "reservationsManager": {
+      "title": "Reservierungen",
+      "empty": "Noch keine Reservierungen.",
+      "table": {
+        "guest": "Gast",
+        "dateTime": "Datum & Uhrzeit",
+        "party": "Gruppe",
+        "status": "Status",
+        "actions": "Aktionen"
+      },
+      "statuses": {
+        "PENDING": "Ausstehend",
+        "CONFIRMED": "Bestätigt",
+        "CANCELLED": "Storniert"
+      },
+      "delete": "Löschen",
+      "deleteConfirm": "Reservierung für {name} löschen?"
+    },
+    "messagesManager": {
+      "title": "Nachrichten",
+      "empty": "Noch keine Nachrichten.",
+      "new": "Neu",
+      "markRead": "Als gelesen markieren",
+      "markUnread": "Als ungelesen markieren",
+      "delete": "Löschen",
+      "deleteConfirm": "Nachricht von {name} löschen?"
+    }
+  }
+}

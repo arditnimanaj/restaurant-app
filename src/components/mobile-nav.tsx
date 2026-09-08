@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { Menu, MapPin, Phone, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
@@ -11,16 +12,19 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-const NAV_LINKS = [
-  { href: "/menu", label: "Menu" },
-  { href: "/about", label: "About" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/reservations", label: "Reservations" },
-  { href: "/contact", label: "Contact" },
-];
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function MobileNav() {
+  const t = useTranslations("nav");
+
+  const NAV_LINKS = [
+    { href: "/menu", label: t("menu") },
+    { href: "/about", label: t("about") },
+    { href: "/gallery", label: t("gallery") },
+    { href: "/reservations", label: t("reservations") },
+    { href: "/contact", label: t("contact") },
+  ];
+
   return (
     <Sheet>
       <SheetTrigger
@@ -28,7 +32,7 @@ export function MobileNav() {
         className="md:hidden"
       >
         <Menu className="size-5" />
-        <span className="sr-only">Open menu</span>
+        <span className="sr-only">{t("openMenu")}</span>
       </SheetTrigger>
       <SheetContent side="right" className="flex w-4/5 flex-col">
         <SheetHeader>
@@ -59,8 +63,10 @@ export function MobileNav() {
               className: "w-full text-xs tracking-widest uppercase",
             })}
           >
-            Reserve a table
+            {t("reserveTable")}
           </SheetClose>
+
+          <LanguageSwitcher className="justify-center pt-2" />
 
           <div className="space-y-2 pt-2 text-xs text-muted-foreground">
             <div className="flex items-center gap-2">

@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   UtensilsCrossed,
@@ -10,7 +8,9 @@ import {
   LogOut,
   Menu,
 } from "lucide-react";
-import { logout } from "@/app/admin/actions";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { logout } from "@/app/[locale]/admin/actions";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -20,14 +20,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { cn } from "cn";
-
-const NAV_ITEMS = [
-  { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/admin/menu", label: "Menu", icon: UtensilsCrossed },
-  { href: "/admin/reservations", label: "Reservations", icon: CalendarCheck },
-  { href: "/admin/messages", label: "Messages", icon: MessageSquare },
-];
 
 function isActive(pathname: string, href: string) {
   return href === "/admin" ? pathname === "/admin" : pathname.startsWith(href);
@@ -40,6 +34,14 @@ function NavLinks({
   pathname: string;
   asSheetClose?: boolean;
 }) {
+  const t = useTranslations("admin.nav");
+  const NAV_ITEMS = [
+    { href: "/admin", label: t("dashboard"), icon: LayoutDashboard },
+    { href: "/admin/menu", label: t("menu"), icon: UtensilsCrossed },
+    { href: "/admin/reservations", label: t("reservations"), icon: CalendarCheck },
+    { href: "/admin/messages", label: t("messages"), icon: MessageSquare },
+  ];
+
   return (
     <>
       {NAV_ITEMS.map((item) => {
@@ -82,6 +84,7 @@ function NavLinks({
 
 export function AdminSidebar() {
   const pathname = usePathname();
+  const t = useTranslations("admin");
 
   return (
     <aside className="hidden h-screen w-64 shrink-0 flex-col border-r border-border/60 bg-card/40 md:flex">
@@ -89,9 +92,12 @@ export function AdminSidebar() {
         <p className="font-heading text-xl tracking-wide">
           Ember <span className="text-primary">&amp;</span> Oak
         </p>
-        <p className="mt-0.5 text-xs tracking-widest text-muted-foreground uppercase">
-          Admin
-        </p>
+        <div className="mt-0.5 flex items-center justify-between">
+          <p className="text-xs tracking-widest text-muted-foreground uppercase">
+            {t("adminLabel")}
+          </p>
+          <LanguageSwitcher />
+        </div>
       </div>
 
       <nav className="flex-1 space-y-1 px-3 py-4">
@@ -106,7 +112,7 @@ export function AdminSidebar() {
             className="w-full justify-start gap-3 text-muted-foreground hover:text-foreground"
           >
             <LogOut className="size-4" />
-            Log out
+            {t("nav.logout")}
           </Button>
         </form>
       </div>
@@ -116,6 +122,7 @@ export function AdminSidebar() {
 
 export function AdminMobileNav() {
   const pathname = usePathname();
+  const t = useTranslations("admin");
 
   return (
     <header className="flex items-center justify-between border-b border-border/60 bg-card/40 px-4 py-4 md:hidden">
@@ -136,7 +143,8 @@ export function AdminMobileNav() {
           <nav className="flex-1 space-y-1 px-2">
             <NavLinks pathname={pathname} asSheetClose />
           </nav>
-          <div className="border-t border-border/60 p-3">
+          <div className="border-t border-border/60 p-3 space-y-3">
+            <LanguageSwitcher className="justify-center" />
             <form action={logout}>
               <Button
                 type="submit"
@@ -144,7 +152,7 @@ export function AdminMobileNav() {
                 className="w-full justify-start gap-3 text-muted-foreground hover:text-foreground"
               >
                 <LogOut className="size-4" />
-                Log out
+                {t("nav.logout")}
               </Button>
             </form>
           </div>

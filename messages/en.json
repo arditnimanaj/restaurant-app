@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "title": "Ember & Oak",
+    "description": "Ember & Oak is a wood-fired restaurant serving seasonal, ingredient-driven cooking."
+  },
+  "nav": {
+    "menu": "Menu",
+    "about": "About",
+    "gallery": "Gallery",
+    "reservations": "Reservations",
+    "contact": "Contact",
+    "findTable": "Find a table",
+    "reserveTable": "Reserve a table",
+    "openMenu": "Open menu"
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "de": "DE"
+  },
+  "footer": {
+    "tagline": "Seasonal, wood-fired cooking in the heart of the city.",
+    "addressLabel": "Address",
+    "addressLine1": "123 Market Street",
+    "addressLine2": "Springfield, USA",
+    "hoursLabel": "Hours",
+    "hoursLine1": "Tue–Sun: 5:00 PM – 10:00 PM",
+    "hoursLine2": "Closed Mondays",
+    "callLabel": "Call",
+    "emailLabel": "Email",
+    "bookTable": "Book a table",
+    "copyright": "© {year} Ember & Oak. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Wood-fired cooking,",
+      "titleLine2": "seasonal ingredients",
+      "subtitle": "The finest ingredients. Live-fire cooking. Extraordinary service.",
+      "reserve": "Reserve a table",
+      "discoverMenu": "Discover the menu"
+    },
+    "featuredMenu": {
+      "eyebrow": "Signature dishes",
+      "heading": "From the menu",
+      "seeFullMenu": "See the full menu"
+    }
+  },
+  "about": {
+    "eyebrow": "Since day one",
+    "title": "Our story",
+    "intro": "Ember & Oak opened with a simple idea: cook good ingredients over real fire, and let them speak for themselves.",
+    "values": {
+      "woodFired": { "label": "Wood-fired", "description": "Every dish passes near the hearth at some point." },
+      "seasonal": { "label": "Seasonal", "description": "Menu changes with what local farms bring us." },
+      "familyRun": { "label": "Family run", "description": "Owned and run by the same family since day one." },
+      "established": { "label": "Est. 2015", "description": "A decade in the neighborhood, and counting." }
+    },
+    "story": {
+      "fire": {
+        "eyebrow": "The fire",
+        "title": "Cooking over real flame",
+        "body": "Our kitchen is built around a wood-burning hearth, not a line of gas burners. It's slower, it's less forgiving, and it's the whole point — real fire gives food a depth you can't fake. Nearly everything that leaves the kitchen, from the bread to the dessert, passes near the flame at some point."
+      },
+      "ingredients": {
+        "eyebrow": "The ingredients",
+        "title": "Seasonal, sourced close to home",
+        "body": "We work with local farms, fishmongers, and butchers to build a menu that actually changes with the seasons — not a laminated menu that never moves. If a vegetable isn't good this week, it isn't on the plate this week. That's the deal we've made with our suppliers, and with our guests."
+      },
+      "table": {
+        "eyebrow": "The table",
+        "title": "Hospitality first",
+        "body": "It's a small dining room with a big focus on hospitality. We want every table to feel like a regular's table, whether it's your first visit or your fiftieth. Servers who know the menu inside out, a room that isn't trying too hard, and food that gets to you hot."
+      }
+    },
+    "quote": "“Whether you’re joining us for a quiet weeknight dinner or a celebration, we’re glad you’re here.”",
+    "reserve": "Reserve a table"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Contact us",
+    "subtitle": "Questions, private events, or feedback — send us a message and we’ll respond within a day or two.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successToast": "Message sent! We'll get back to you soon."
+    },
+    "errors": {
+      "missingFields": "Please fill in every field.",
+      "invalidEmail": "Please enter a valid email address."
+    }
+  },
+  "reservations": {
+    "eyebrow": "Join us",
+    "title": "Reserve a table",
+    "subtitle": "Submit a request below and we’ll confirm by email or phone. For parties larger than 8, please contact us directly.",
+    "form": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "date": "Date",
+      "time": "Time",
+      "partySize": "Party size",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Allergies, special occasions, seating preferences...",
+      "submit": "Request reservation",
+      "submitting": "Sending...",
+      "successToast": "Reservation request sent! We'll confirm by email."
+    },
+    "errors": {
+      "missingFields": "Please fill in every required field.",
+      "invalidEmail": "Please enter a valid email address.",
+      "invalidPartySize": "Party size must be between 1 and 20.",
+      "invalidDateTime": "Please choose a valid date and time.",
+      "pastDateTime": "Please choose a date and time in the future."
+    }
+  },
+  "menu": {
+    "eyebrow": "Ember & Oak",
+    "title": "Menu",
+    "subtitle": "Seasonal and subject to change based on availability.",
+    "categories": {
+      "STARTER": "Starters",
+      "MAIN": "Mains",
+      "DESSERT": "Desserts",
+      "DRINK": "Drinks"
+    },
+    "empty": "The menu is being updated. Please check back soon."
+  },
+  "gallery": {
+    "eyebrow": "Inside Ember & Oak",
+    "title": "Gallery",
+    "subtitle": "A look inside the restaurant — the dining room, the fire, and what comes off it.",
+    "items": {
+      "diningRoom": "The dining room",
+      "hearth": "Wood-fired hearth",
+      "ribeye": "Wood-Fired Ribeye",
+      "bar": "The bar",
+      "privateEvents": "Private events",
+      "dessert": "Seasonal dessert"
+    }
+  },
+  "admin": {
+    "brand": "Ember & Oak",
+    "adminLabel": "Admin",
+    "nav": {
+      "dashboard": "Dashboard",
+      "menu": "Menu",
+      "reservations": "Reservations",
+      "messages": "Messages",
+      "logout": "Log out"
+    },
+    "login": {
+      "title": "Admin sign in",
+      "description": "Enter the admin password to manage the menu and reservations.",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "error": "Incorrect password."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "stats": {
+        "menuItems": "Menu items",
+        "menuItemsSubtitle": "{count} available",
+        "reservations": "Reservations",
+        "reservationsSubtitle": "{count} pending",
+        "thisWeek": "This week",
+        "thisWeekSubtitle": "upcoming reservations",
+        "messages": "Messages",
+        "messagesSubtitle": "{count} unread"
+      },
+      "reservationStatus": "Reservation status",
+      "upcomingReservations": "Upcoming reservations",
+      "noUpcomingReservations": "No upcoming reservations.",
+      "partyOf": "party of {count}",
+      "viewAll": "View all",
+      "menuByCategory": "Menu by category",
+      "recentMessages": "Recent messages",
+      "noMessagesYet": "No messages yet."
+    },
+    "menuManager": {
+      "title": "Menu",
+      "addItem": "Add item",
+      "addItemTitle": "Add menu item",
+      "editItemTitle": "Edit menu item",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Delete \"{name}\"? This cannot be undone.",
+      "saveItem": "Save item",
+      "saveChanges": "Save changes",
+      "empty": "No menu items yet. Add your first one above.",
+      "fields": {
+        "name": "Name",
+        "description": "Description",
+        "price": "Price ($)",
+        "category": "Category",
+        "imageUrl": "Image URL"
+      },
+      "categories": {
+        "STARTER": "Starter",
+        "MAIN": "Main",
+        "DESSERT": "Dessert",
+        "DRINK": "Drink"
+      },
+      "table": {
+        "name": "Name",
+        "price": "Price",
+        "available": "Available",
+        "actions": "Actions"
+      }
+    },
+    "reservationsManager": {
+      "title": "Reservations",
+      "empty": "No reservations yet.",
+      "table": {
+        "guest": "Guest",
+        "dateTime": "Date & time",
+        "party": "Party",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "statuses": {
+        "PENDING": "Pending",
+        "CONFIRMED": "Confirmed",
+        "CANCELLED": "Cancelled"
+      },
+      "delete": "Delete",
+      "deleteConfirm": "Delete the reservation for {name}?"
+    },
+    "messagesManager": {
+      "title": "Messages",
+      "empty": "No messages yet.",
+      "new": "New",
+      "markRead": "Mark as read",
+      "markUnread": "Mark as unread",
+      "delete": "Delete",
+      "deleteConfirm": "Delete message from {name}?"
+    }
+  }
+}

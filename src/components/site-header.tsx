@@ -1,17 +1,21 @@
-import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/mobile-nav";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
-const NAV_LINKS = [
-  { href: "/menu", label: "Menu" },
-  { href: "/about", label: "About" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/reservations", label: "Reservations" },
-  { href: "/contact", label: "Contact" },
-];
+export async function SiteHeader() {
+  const t = await getTranslations("nav");
 
-export function SiteHeader() {
+  const NAV_LINKS = [
+    { href: "/menu", label: t("menu") },
+    { href: "/about", label: t("about") },
+    { href: "/gallery", label: t("gallery") },
+    { href: "/reservations", label: t("reservations") },
+    { href: "/contact", label: t("contact") },
+  ];
+
   return (
     <header className="sticky top-0 z-40 bg-background">
       <div className="hidden border-b border-border/60 bg-black/40 md:block">
@@ -29,6 +33,7 @@ export function SiteHeader() {
               <Mail className="size-3.5 text-primary" />
               <span>hello@emberandoak.com</span>
             </div>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
@@ -59,7 +64,7 @@ export function SiteHeader() {
             render={<Link href="/reservations" />}
             className="hidden border-primary/50 px-5 text-xs tracking-widest text-primary uppercase hover:bg-primary/10 hover:text-primary md:inline-flex"
           >
-            Find a table
+            {t("findTable")}
           </Button>
           <MobileNav />
         </div>

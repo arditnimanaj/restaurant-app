@@ -1,0 +1,38 @@
+{
+  "Burrata & Heirloom Tomato": {
+    "name": "Burrata & Heirloom-Tomaten",
+    "description": "Cremige Burrata, Heirloom-Tomaten, Basilikumöl, Meersalz."
+  },
+  "Crispy Calamari": {
+    "name": "Knuspriger Calamari",
+    "description": "Leicht frittierter Calamari, Zitronen-Aioli, Chiliflocken."
+  },
+  "Wood-Fired Ribeye": {
+    "name": "Ribeye vom Holzfeuer",
+    "description": "400g Ribeye, geröstete Knoblauchbutter, saisonales Gemüse."
+  },
+  "Wild Mushroom Risotto": {
+    "name": "Risotto mit Wildpilzen",
+    "description": "Arborio-Reis, gemischte Wildpilze, Parmesan, Trüffelöl."
+  },
+  "Pan-Seared Salmon": {
+    "name": "Gebratener Lachs",
+    "description": "Zitrusglasur, gegrillter Spargel, Kräuterkartoffeln."
+  },
+  "Chocolate Fondant": {
+    "name": "Schokoladenfondant",
+    "description": "Warmer dunkler Schokoladenkuchen, flüssiger Kern, Vanilleeis."
+  },
+  "Lemon Tart": {
+    "name": "Zitronentarte",
+    "description": "Mürbeteig, würzige Zitronencreme, flambiertes Baiser."
+  },
+  "House Red Blend": {
+    "name": "Hausgemachte Rotwein-Cuvée",
+    "description": "Ein Glas unserer wechselnden Rotwein-Cuvée vom Sommelier."
+  },
+  "Craft Old Fashioned": {
+    "name": "Craft Old Fashioned",
+    "description": "Bourbon, Bitters, Orangenschale, hausgemachter Sirup."
+  }
+}

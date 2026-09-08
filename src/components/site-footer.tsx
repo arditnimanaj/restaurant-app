@@ -1,25 +1,16 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
-const COLUMNS = [
-  {
-    label: "Address",
-    lines: ["123 Market Street", "Springfield, USA"],
-  },
-  {
-    label: "Hours",
-    lines: ["Tue–Sun: 5:00 PM – 10:00 PM", "Closed Mondays"],
-  },
-  {
-    label: "Call",
-    lines: ["(555) 123-4567"],
-  },
-  {
-    label: "Email",
-    lines: ["hello@emberandoak.com"],
-  },
-];
+export async function SiteFooter() {
+  const t = await getTranslations("footer");
 
-export function SiteFooter() {
+  const COLUMNS = [
+    { label: t("addressLabel"), lines: [t("addressLine1"), t("addressLine2")] },
+    { label: t("hoursLabel"), lines: [t("hoursLine1"), t("hoursLine2")] },
+    { label: t("callLabel"), lines: ["(555) 123-4567"] },
+    { label: t("emailLabel"), lines: ["hello@emberandoak.com"] },
+  ];
+
   return (
     <footer className="border-t border-border/60 bg-black/30">
       <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
@@ -27,7 +18,7 @@ export function SiteFooter() {
           Ember <span className="text-primary">&amp;</span> Oak
         </p>
         <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
-          Seasonal, wood-fired cooking in the heart of the city.
+          {t("tagline")}
         </p>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-2 md:grid-cols-4">
@@ -50,12 +41,12 @@ export function SiteFooter() {
             href="/reservations"
             className="border-b border-primary/50 pb-1 text-xs tracking-widest text-primary uppercase transition-colors hover:border-primary hover:text-primary"
           >
-            Book a table
+            {t("bookTable")}
           </Link>
         </div>
       </div>
       <div className="border-t border-border/60 py-5 text-center text-xs tracking-wide text-muted-foreground">
-        &copy; {new Date().getFullYear()} Ember &amp; Oak. All rights reserved.
+        {t("copyright", { year: new Date().getFullYear() })}
       </div>
     </footer>
   );
