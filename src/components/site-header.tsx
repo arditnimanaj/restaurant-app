@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MobileNav } from "@/components/mobile-nav";
 
 const NAV_LINKS = [
   { href: "/menu", label: "Menu" },
@@ -40,7 +41,7 @@ export function SiteHeader() {
           >
             Ember <span className="text-primary">&amp;</span> Oak
           </Link>
-          <nav className="flex flex-wrap items-center gap-x-7 gap-y-2">
+          <nav className="hidden items-center gap-x-7 md:flex">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -56,10 +57,11 @@ export function SiteHeader() {
             size="sm"
             nativeButton={false}
             render={<Link href="/reservations" />}
-            className="border-primary/50 px-5 text-xs tracking-widest text-primary uppercase hover:bg-primary/10 hover:text-primary"
+            className="hidden border-primary/50 px-5 text-xs tracking-widest text-primary uppercase hover:bg-primary/10 hover:text-primary md:inline-flex"
           >
             Find a table
           </Button>
+          <MobileNav />
         </div>
       </div>
     </header>

@@ -2,15 +2,7 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { toast } from "sonner";
-import {
-  User,
-  Mail,
-  Phone,
-  CalendarDays,
-  Clock,
-  Users,
-  MessageSquare,
-} from "lucide-react";
+import { User, Mail, Phone, Users, MessageSquare } from "lucide-react";
 import { submitReservation, type ReservationState } from "./actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -101,16 +93,13 @@ export function ReservationForm() {
           >
             Date
           </Label>
-          <div className="relative">
-            <FieldIcon icon={CalendarDays} />
-            <Input
-              id="date"
-              name="date"
-              type="date"
-              required
-              className="pl-9"
-            />
-          </div>
+          <Input
+            id="date"
+            name="date"
+            type="date"
+            required
+            className="w-full [color-scheme:dark]"
+          />
         </div>
         <div className="space-y-2">
           <Label
@@ -119,16 +108,13 @@ export function ReservationForm() {
           >
             Time
           </Label>
-          <div className="relative">
-            <FieldIcon icon={Clock} />
-            <Input
-              id="time"
-              name="time"
-              type="time"
-              required
-              className="pl-9"
-            />
-          </div>
+          <Input
+            id="time"
+            name="time"
+            type="time"
+            required
+            className="w-full [color-scheme:dark]"
+          />
         </div>
         <div className="space-y-2">
           <Label
@@ -143,6 +129,8 @@ export function ReservationForm() {
               id="partySize"
               name="partySize"
               type="number"
+              inputMode="numeric"
+              pattern="[0-9]*"
               min={1}
               max={20}
               defaultValue={2}
